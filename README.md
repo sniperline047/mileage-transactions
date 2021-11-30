@@ -18,7 +18,7 @@ And there you have it!
 
 # Snapshots
 
-<img src="1.jpeg" alt="screenshot-1" width="200"/>
-<img src="2.jpeg" alt="screenshot-2" width="200"/>
-<img src="3.jpeg" alt="screenshot-3" width="200"/>
-<img src="4.jpeg" alt="screenshot-4" width="200"/>
+<img src="./screenshots/1.jpeg" alt="screenshot-1" width="200"/>
+<img src="./screenshots/2.jpeg" alt="screenshot-2" width="200"/>
+<img src="./screenshots/3.jpeg" alt="screenshot-3" width="200"/>
+<img src="./screenshots/4.jpeg" alt="screenshot-4" width="200"/>
