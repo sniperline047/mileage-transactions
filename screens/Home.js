@@ -5,8 +5,14 @@ import { Caption } from 'react-native-paper'
 import { Chip, InfoItem } from '../components'
 import { default as s } from '../theme/Styles'
 import { useSelector } from 'react-redux'
-import { FaButton } from '../components';
-import { getMetrics, getCost, getTransaction, trends, getMonthYear } from '../utils/metrics'
+import { FaButton } from '../components'
+import {
+  getMetrics,
+  getCost,
+  getTransaction,
+  trends,
+  getMonthYear,
+} from '../utils/metrics'
 
 const Home = ({ navigation }) => {
   let trxns = useSelector((state) => state.transactions)
@@ -20,7 +26,7 @@ const Home = ({ navigation }) => {
   })
 
   const routeToAdd = () => {
-    navigation.navigate('Add');
+    navigation.navigate('Add')
   }
 
   useEffect(() => {
@@ -60,7 +66,7 @@ const Home = ({ navigation }) => {
           <View style={s.flexCenter}>
             <Chip name="Costs" icon="circle-multiple" />
             <View style={s.infoCardContainer}>
-              <Caption style={{height: 20}}>This Month</Caption>
+              <Caption style={{ height: 20 }}>This Month</Caption>
               <InfoItem
                 icon="gas-station"
                 title={`₹ ${metrics.currentMonthAvg}`}

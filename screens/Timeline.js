@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { View, StyleSheet, SectionList, Text } from 'react-native'
 import { FaButton, TimelineItem } from '../components'
 import { default as s } from '../theme/Styles'
@@ -6,7 +7,7 @@ import { Colors as c, Spaces as spc } from '../theme/Theme'
 import { useSelector } from 'react-redux'
 import { getMonthDay, sectionedData } from '../utils/metrics'
 
-const Timeline = () => {
+const Timeline = ({ navigation }) => {
   let trxns = useSelector((state) => state.transactions)
 
   const renderItem = ({ item }) => (
@@ -24,14 +25,14 @@ const Timeline = () => {
     </View>
   )
 
+  const routeToAdd = () => {
+    navigation.navigate('Add')
+  }
+
   return (
     <View style={s.baseContainer}>
       <View style={styles.timelineContainer}>
-        <View
-          style={[
-            { width: spc.large, position: 'absolute', left: 4, height: '100%' },
-            s.flexCenter,
-          ]}>
+        <View style={[styles.timelineBarContainer, s.flexCenter]}>
           <View style={styles.timelineStart} />
           <View style={styles.timelineBar} />
         </View>
@@ -46,9 +47,13 @@ const Timeline = () => {
           )}
         />
       </View>
-      <FaButton />
+      <FaButton onClick={routeToAdd} />
     </View>
   )
+}
+
+Timeline.propTypes = {
+  navigation: PropTypes.object.isRequired,
 }
 
 const styles = StyleSheet.create({
@@ -61,6 +66,12 @@ const styles = StyleSheet.create({
     margin: spc.smaller,
     marginBottom: 0,
     flexDirection: 'row',
+  },
+  timelineBarContainer: {
+    width: spc.large,
+    position: 'absolute',
+    left: 4,
+    height: '100%',
   },
   timelineStart: {
     width: spc.default,

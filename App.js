@@ -1,11 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { NavigationContainer } from "@react-navigation/native";
-import DrawerNavigation from './navigation/DrawerNavigation';
-import { AppTheme, ComponentTheme } from './theme/Theme';
-import { Provider as PaperProvider } from 'react-native-paper';
-import { Provider as ReduxProvider } from 'react-redux';
-import store from './store/store';
+import { StatusBar } from 'expo-status-bar'
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import DrawerNavigation from './navigation/DrawerNavigation'
+import { AppTheme, ComponentTheme } from './theme/Theme'
+import { Provider as PaperProvider } from 'react-native-paper'
+import { Provider as ReduxProvider } from 'react-redux'
+import store from './store/store'
 
 export default function App() {
   return (
@@ -17,5 +17,5 @@ export default function App() {
         </NavigationContainer>
       </PaperProvider>
     </ReduxProvider>
-  );
+  )
 }

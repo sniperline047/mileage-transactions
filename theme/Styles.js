@@ -56,7 +56,7 @@ export default StyleSheet.create({
   },
   customHeader: {
     backgroundColor: c.background,
-    color: c.primary
+    color: c.primary,
   },
   customInput: {
     backgroundColor: c.backgroundSecondary,
